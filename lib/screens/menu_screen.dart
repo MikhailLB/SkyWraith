@@ -1,13 +1,14 @@
 import 'package:flutter/material.dart';
 
 import '../services/progress.dart';
+import '../setup/external_urls.dart';
 import '../theme.dart';
 import 'game_screen.dart';
 import 'levels_screen.dart';
 import 'web_screen.dart';
 
-const String kPrivacyUrl = 'https://skywratth.com/privacy-policy.html';
-const String kSupportUrl = 'https://skywratth.com/support.html';
+const String kPrivacyUrl = privacyPagePath;
+const String kSupportUrl = supportPagePath;
 
 class MenuScreen extends StatefulWidget {
   const MenuScreen({super.key, required this.progress});

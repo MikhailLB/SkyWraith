@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "127562116017",
+    "project_id": "skywrath-3bed5",
+    "storage_bucket": "skywrath-3bed5.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:127562116017:android:fbeacc6029b6b465742b90",
+        "android_client_info": {
+          "package_name": "com.chaosskywrath.skywrath"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBZ_bxGPGLrVF6dZwSynptcdczRLOp82aU"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

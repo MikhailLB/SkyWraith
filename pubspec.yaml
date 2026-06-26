@@ -2,7 +2,7 @@ name: skywrath
 description: "Sky Wraith - Zeus Lightning puzzle game."
 publish_to: 'none'
 
-version: 1.0.0+1
+version: 1.0.1+2
 
 environment:
   sdk: ^3.12.2
@@ -10,9 +10,40 @@ environment:
 dependencies:
   flutter:
     sdk: flutter
+
   cupertino_icons: ^1.0.8
-  shared_preferences: ^2.3.2
-  webview_flutter: ^4.10.0
+
+  # Gray-flow networking + storage
+  http: ^1.5.0
+  shared_preferences: ^2.5.3
+  flutter_secure_storage: ^10.0.0-beta.4
+  connectivity_plus: ^7.0.0
+  device_info_plus: ^12.1.0
+  package_info_plus: ^9.0.0
+  url_launcher: ^6.3.2
+
+  # Attribution
+  appsflyer_sdk: ^6.17.0
+
+  # Firebase
+  firebase_core: ^4.0.0
+  firebase_messaging: ^16.0.0
+  firebase_app_check: ^0.4.0
+
+  # WebView
+  webview_flutter: ^4.14.0
+  webview_flutter_android: ^4.13.0
+
+  # Notifications + media + uploads
+  flutter_local_notifications: ^19.2.0
+  video_player: ^2.10.0
+
+  # File upload in the WebView. Pinned to the last Java-based
+  # release (8.x). 10+ ships a Kotlin-only plugin that brings
+  # its own Kotlin Gradle Plugin and clashes with Flutter's
+  # Built-in Kotlin support — symptom is GeneratedPluginRegistrant
+  # failing to resolve FilePickerPlugin.
+  file_picker: 8.1.4
 
 dev_dependencies:
   flutter_test:
@@ -24,13 +55,20 @@ flutter:
   uses-material-design: true
   assets:
     - assets/
+    - assets/gray/
 
 flutter_launcher_icons:
   android: true
   ios: false
   image_path: "assets/icon.png"
   remove_alpha_ios: true
+  # Adaptive launcher icon canvas is 108dp with the safe zone
+  # confined to the central 66dp circle (~61% of the width).
+  # Anything painted outside that circle is liable to clipping
+  # in pill / squircle / teardrop launcher masks. Insetting the
+  # foreground by ~18% keeps the Zeus + lightning composition
+  # fully visible regardless of launcher shape.
   adaptive_icon_background: "#0B1020"
   adaptive_icon_foreground: "assets/icon.png"
-  adaptive_icon_foreground_inset: 0
+  adaptive_icon_foreground_inset: 18
   min_sdk_android: 21

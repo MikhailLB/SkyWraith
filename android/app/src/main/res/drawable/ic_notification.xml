@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+    Status-bar push icon — Material `local_fire_department`
+    silhouette. Single closed sub-path, well-tested at 24dp;
+    Android tints it white-on-transparent for the system tray.
+    Kept distinct from the launcher icon per Play policy.
+-->
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="24dp"
+    android:height="24dp"
+    android:viewportWidth="24"
+    android:viewportHeight="24">
+    <path
+        android:fillColor="#FFFFFFFF"
+        android:pathData="M19.48,12.35 c-1.57,-4.08 -7.16,-4.3 -5.81,-10.23 0.1,-0.44 -0.37,-0.78 -0.75,-0.55 C9.29,3.71 6.68,8 8.87,13.62 c0.18,0.46 -0.36,0.89 -0.75,0.59 -1.81,-1.37 -2,-3.34 -1.84,-4.75 0.06,-0.52 -0.62,-0.77 -0.91,-0.34 C4.69,10.6 4,12.6 4,14.77 c0.21,4.9 4.35,6.41 5.84,6.6 2.13,0.27 4.44,-0.12 6.1,-1.64 1.83,-1.69 2.5,-4.4 1.54,-6.78 z"/>
+</vector>
